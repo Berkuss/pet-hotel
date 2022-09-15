@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    username: app-user
+    password: password
+    url: jdbc:postgresql://localhost:5432/pet_hotel

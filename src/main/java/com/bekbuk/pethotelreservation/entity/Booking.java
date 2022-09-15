@@ -46,7 +46,4 @@ public class Booking {
     @Enumerated(EnumType.STRING)
     private CheckedStatus checkingStatus;
 
-    public Booking() {
-
-    }
 }
