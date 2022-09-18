@@ -1,5 +1,6 @@
 package com.bekbuk.pethotelreservation.controller;
 
+import com.bekbuk.pethotelreservation.exception.PetHotelReservationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -14,7 +15,6 @@ import java.util.Map;
 @RestControllerAdvice
 public class ExceptionHandlerController {
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception ex) {
         return ResponseEntity
@@ -34,5 +34,11 @@ public class ExceptionHandlerController {
             errors.put(fieldName, errorMessage);
         });
         return errors;
+    }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(PetHotelReservationException.class)
+    public String handleException(PetHotelReservationException ex) {
+        return ex.getMessage();
     }
 }

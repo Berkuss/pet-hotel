@@ -19,8 +19,8 @@ public class ReservationController {
     }
 
     @PostMapping("/check-in")
-    public String checkin(@RequestParam String petName){
-        return reservationService.checkin(petName);
+    public void checkin(@RequestParam String petName) {
+        reservationService.checkin(petName);
     }
 
     @PostMapping("/pay")
