@@ -9,5 +9,24 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: app-user
       POSTGRES_DB: pet_hotel
+      ALLOW_IP_RANGE: 0.0.0.0/0
     ports:
       - "5432:5432"
+    networks:
+      - local-network
+
+  pet-hotel:
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL : jdbc:postgresql://pet-hotel-database:5432/pet_hotel
+    depends_on:
+      - pet-hotel-database
+    ports:
+      - "8080:8080"
+    networks:
+      - local-network
+
+
+networks:
+  local-network:
+    driver: bridge
