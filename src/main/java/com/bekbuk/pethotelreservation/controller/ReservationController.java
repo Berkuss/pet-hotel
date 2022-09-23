@@ -24,7 +24,7 @@ public class ReservationController {
     }
 
     @PostMapping("/pay")
-    public void pay(@RequestParam String petName) throws Exception {
+    public void pay(@RequestParam String petName) {
         reservationService.pay(petName);
     }
 
