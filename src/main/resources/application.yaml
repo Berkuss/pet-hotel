@@ -3,3 +3,8 @@ spring:
     username: app-user
     password: password
     url: jdbc:postgresql://localhost:5432/pet_hotel
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
