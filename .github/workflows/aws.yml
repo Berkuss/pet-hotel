@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: pet-hotel          # set this to your Amazon ECR repository name
   ECS_SERVICE: pet-hotel-container-service  # set this to your Amazon ECS service name
   ECS_CLUSTER: default                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION:  first-run-task-definition # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION:  31464e4f39ae45fba7a0a34e8f9cb9dd  # set this to the path to your Amazon ECS task definition
   CONTAINER_NAME: pet-hotel-container           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
