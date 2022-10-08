@@ -1,8 +1,8 @@
 spring:
   datasource:
-    username: app-user
-    password: password
-    url: jdbc:postgresql://localhost:5432/pet_hotel
+    username: ${SPRING_DATA_SOURCE_USERNAME: app-user} 
+    password: ${SPRING_DATA_SOURCE_USERNAME: password} 
+    url: ${SPRING_DATA_SOURCE_URL: jdbc:postgresql://localhost:5432/pet_hotel}
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
