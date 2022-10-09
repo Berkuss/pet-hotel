@@ -33,7 +33,7 @@ on:
 env:
   AWS_REGION: eu-central-1                  # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: pet-hotel          # set this to your Amazon ECR repository name
-  ECS_SERVICE: pet-hootel-service  # set this to your Amazon ECS service name
+  ECS_SERVICE: pet-hotel-service  # set this to your Amazon ECS service name
   ECS_CLUSTER: bekbuk                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION:  task-defination.json  # set this to the path to your Amazon ECS task definition
   CONTAINER_NAME: pet-hotel-container           # set this to the name of the container in the
@@ -78,7 +78,7 @@ jobs:
 
     - name: Download task definition
       run: |
-        aws ecs describe-task-definition --task-definition pet-hotel-task --query taskDefinition > task-definition.json
+        aws ecs describe-task-definition --task-definition pet-hotel-task --query taskDefinition > task-defination.json
 
     - name: List Files
       run: |
