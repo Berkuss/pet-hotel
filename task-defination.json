@@ -30,6 +30,7 @@
             "systemControls": []
         }
     ],
+    "requires_compatibilities" :["FARGATE"],
     "family": "task-defination",
     "taskRoleArn": "arn:aws:iam::637331329871:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::637331329871:role/ecsTaskExecutionRole",
